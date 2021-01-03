@@ -1,0 +1,24 @@
+.column {
+  float: left;
+  width: 50%;
+  overflow: hidden;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  overflow: hidden;;
+}
+
+img{
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  border-radius: 8px;
+
+}

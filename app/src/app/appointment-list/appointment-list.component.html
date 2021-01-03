@@ -6,7 +6,7 @@
   <table mat-table [dataSource]="appointments" class="mat-elevation-z8">
     <ng-container matColumnDef = "appointmentDate">
       <th mat-header-cell *matHeaderCellDef>Appointment Date</th>
-      <td mat-cell *matCellDef="let appointment">{{appointment.appointmentDate | date: 'dd/MM/yyyy'}}</td>
+      <td mat-cell *matCellDef="let appointment">{{appointment.appointmentDate}}</td>
     </ng-container>
 
     <ng-container matColumnDef = "name">

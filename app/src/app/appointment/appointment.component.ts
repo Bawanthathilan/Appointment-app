@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Appointment } from '../appointment';
 import { AppointmentService } from '../appointment.service';
 
+
 @Component({
   selector: 'app-appointment',
   templateUrl: './appointment.component.html',
