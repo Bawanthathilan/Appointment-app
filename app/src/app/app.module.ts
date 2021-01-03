@@ -37,12 +37,16 @@ import{
  import {
   MatNativeDateModule,
  }from '@angular/material/core';
-import { HomeComponent } from './home/home.component'
+import { HomeComponent } from './home/home.component';
+import { AppointmentComponent } from './appointment/appointment.component';
+import { AppointmentListComponent } from './appointment-list/appointment-list.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AppointmentComponent,
+    AppointmentListComponent
   ],
   imports: [
     BrowserModule,

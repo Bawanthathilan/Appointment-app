@@ -1,0 +1,37 @@
+<mat-spinner *ngIf="loading"></mat-spinner>
+<mat-toolbar *ngIf="successMsg" color ="accent">{{successMsg}}</mat-toolbar>
+<mat-toolbar *ngIf="errorMsg" color ="warn">{{successMsg}}</mat-toolbar>
+
+<div *ngIf="!loading && !loading">
+  <table mat-table [dataSource]="appointments" class="mat-elevation-z8">
+    <ng-container matColumnDef = "appointmentDate">
+      <th mat-header-cell *matHeaderCellDef>Appointment Date</th>
+      <td mat-cell *matCellDef="let appointment">{{appointment.appointmentDate}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef = "name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let appointment">{{appointment.name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef = "email">
+      <th mat-header-cell *matHeaderCellDef>Email</th>
+      <td mat-cell *matCellDef="let appointment">{{appointment.email}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef = "message">
+      <th mat-header-cell *matHeaderCellDef>message</th>
+      <td mat-cell *matCellDef="let appointment">{{appointment.message}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef = "cancel">
+      <th mat-header-cell *matHeaderCellDef>Cancel</th>
+      <td mat-cell *matCellDef="let appointment"><button (click)="cancelAppointment(appointment._id)" mat-raised-button color="warn">Cancel</button></td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columns"></tr>
+    <tr mat-row *matRowDef="let appointments; columns: columns"></tr>
+
+  </table>
+
+</div>
