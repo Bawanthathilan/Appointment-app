@@ -2,6 +2,9 @@
 <mat-toolbar *ngIf="successMsg" color ="accent">{{successMsg}}</mat-toolbar>
 <mat-toolbar *ngIf="errorMsg" color ="warn">{{successMsg}}</mat-toolbar>
 
+<h1 class="bindoo-heading" style="font-size: 48px; "><span style="color: #673ab7;">Your Appoint</span><span
+  style="color: #444;">ments</span></h1>
+
 <div *ngIf="!loading && !loading">
   <table mat-table [dataSource]="appointments" class="mat-elevation-z8">
     <ng-container matColumnDef = "appointmentDate">
