@@ -20,7 +20,7 @@ MongoClient.connect(`mongodb://${config.dbHost}`,{
   .then(client =>{
     const db = client.db(config.dbName);
     const collection = db.collection(config.dbCollection);
-    app.local[config.dbCollection] = collection;
+    app.locals[config.dbCollection] = collection;
   })
 
 // view engine setup
