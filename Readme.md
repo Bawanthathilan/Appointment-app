@@ -1,5 +1,5 @@
 # Simple Appointment App
-A simple appointment system for a friend 
+A simple appointment system for a booking system
 
 Appointment Bookings makes it easy for you to appointments. 
 
